@@ -61,16 +61,9 @@ const quotes = [
 let currentIndex = 0;
 let currentCategory = "science";
 
-// DOM Elements
-const quoteContainer = document.getElementById("quote");
-const categorySelect = document.getElementById("category");
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
-const randomButton = document.getElementById("random");
-const themeToggle = document.getElementById("theme-toggle");
-
 
 // Initialize display with the first quote
+const quoteContainer = document.getElementById("quote");
 function displayQuote(index) {
     const filteredQuotes = quotes.filter(q => q.category === currentCategory);
     quoteContainer.textContent = filteredQuotes[index].text;
@@ -80,6 +73,7 @@ displayQuote(currentIndex);
 
 
 // Category change functionality
+const categorySelect = document.getElementById("category");
 categorySelect.addEventListener('change', (event) => {
     currentCategory = event.target.value;
     currentIndex = 0; // Reset to the first quote in the new category
@@ -87,6 +81,7 @@ categorySelect.addEventListener('change', (event) => {
 });
 
 // Previous button functionality
+const prevButton = document.getElementById("prev");
 prevButton.addEventListener('click', () => {
   const filteredQuotes = quotes.filter(q => q.category === currentCategory);
   if (currentIndex > 0) {
@@ -96,6 +91,7 @@ prevButton.addEventListener('click', () => {
 });
 
 // Next button functionality
+const nextButton = document.getElementById("next");
 nextButton.addEventListener('click', () => {
   const filteredQuotes = quotes.filter(q => q.category === currentCategory);
   if (currentIndex < filteredQuotes.length - 1) {
@@ -104,7 +100,10 @@ nextButton.addEventListener('click', () => {
   }
 });
 
+
+
 // Random button functionality
+const randomButton = document.getElementById("random");
 randomButton.addEventListener('click', () => {
     const filteredQuotes = quotes.filter(q => q.category === currentCategory);
     if (filteredQuotes.length > 0) {
@@ -114,6 +113,11 @@ randomButton.addEventListener('click', () => {
 });
 
 // Dark/Light mode toggle functionality
+const themeToggle = document.getElementById("theme-toggle");
+
 themeToggle.addEventListener('change', () => {
     document.body.classList.toggle('dark-mode', themeToggle.checked);
 });
+
+
+
