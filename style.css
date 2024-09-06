@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #e0f7fa;
   color: #333;
   transition: background-color 0.3s ease, color 0.3s ease;
   display: flex;
@@ -32,6 +32,7 @@ h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: #444;
+  font-family:cursive;
 }
 
 label {
@@ -40,6 +41,7 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   color: #555;
+  font-family: cursive;
 }
 
 select {
@@ -49,6 +51,7 @@ select {
   border-radius: 8px;
   width: 100%;
   margin-bottom: 1.5rem;
+  background-color: #e0f2f1;
 }
 
 #quote-container {
@@ -61,8 +64,8 @@ select {
   padding: 1rem;
   background-color: #f9f9f9;
   border-radius: 8px;
-  border: 1px solid #ddd;
-  color: #666;
+  border: 1px solid #b2dfdb;;
+  color: #00796b;
 }
 
 .buttons {
@@ -71,3 +74,16 @@ select {
   margin-bottom: 1.5rem;
 }
 
+.buttons button {
+  background-color: #00796b; /* Teal background for buttons */
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.buttons button:hover {
+  background-color: #004d40; /* Darker teal on hover */
+}
