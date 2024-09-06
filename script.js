@@ -67,6 +67,7 @@ const categorySelect = document.getElementById("category");
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 const randomButton = document.getElementById("random");
+const themeToggle = document.getElementById("theme-toggle");
 
 
 // Initialize display with the first quote
@@ -110,4 +111,9 @@ randomButton.addEventListener('click', () => {
         currentIndex = Math.floor(Math.random() * filteredQuotes.length); // Random index
         displayQuote(currentIndex);
     }
+});
+
+// Dark/Light mode toggle functionality
+themeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode', themeToggle.checked);
 });

@@ -121,6 +121,32 @@ select {
   border-color: #004d40; 
 }
 
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .container {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode #quote {
+  border-color: #333;
+  color: #e0e0e0;
+  background-color: #333; /* Dark background for better contrast */
+}
+body.dark-mode button {
+  background-color: #333; 
+  color: #e0e0e0;
+  border: 2px solid #444; 
+}
+body.dark-mode select {
+  background-color: #333; 
+  color: #e0e0e0;
+  border: 2px solid #444; 
+}
+
 /* Media Queries */
 
 /* Large Laptop screens */
