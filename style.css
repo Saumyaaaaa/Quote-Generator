@@ -1,6 +1,4 @@
 /* style.css */
-
-/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -70,7 +68,7 @@ select {
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-around;
   margin-bottom: 1.5rem;
 }
 
@@ -85,5 +83,138 @@ select {
 }
 
 .buttons button:hover {
-  background-color: #004d40; /* Darker teal on hover */
+  background-color: #004d40;
+  transform: translateY(-2px); 
+}
+
+.font-controls {
+  margin-bottom: 1.5rem;
+}
+
+.font-controls button {
+  background-color: #00796b; 
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem; 
+  border-radius: 12px; 
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0 0.5rem; 
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.font-controls button:hover {
+  background-color: #004d40;
+  transform: translateY(-2px);
+}
+
+#theme-toggle {
+  margin-left: 0.5rem;
+}
+
+#theme-toggle:checked ~ .container {
+  background-color: #004d40;
+  color: #ffffff;
+}
+
+#theme-toggle:checked ~ .container #quote {
+  border-color: #004d40; 
+}
+
+/* Media Queries */
+
+/* Large Laptop screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 800px; /* Increase max-width for large screens */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Larger heading size for big screens */
+  }
+
+  select, #quote {
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
+  }
+}
+
+/* Tablet devices */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem; /* Adjusted font size for tablets */
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .buttons button {
+    width: auto; /* Adjust width for better appearance */
+    padding: 0.5rem 1rem; /* Adjust padding for buttons */
+    font-size: 1rem; /* Adjust font size for better touch targets */
+    margin: 0; /* Ensure no extra margin */
+  }
+
+  .font-controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .font-controls button {
+    width: auto; /* Adjust width for better appearance */
+    padding: 0.5rem 1rem; /* Adjust padding for buttons */
+    font-size: 1rem; /* Adjust font size for better touch targets */
+    margin: 0; /* Ensure no extra margin */
+  }
+
+  select {
+    padding: 0.75rem;
+    font-size: 1rem; /* Adjust font size for select */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+    max-width: 100%; /* Ensure container fits well on small screens */
+  }
+
+  h1 {
+    font-size: 1.4rem; /* Adjust heading size for mobile */
+  }
+
+  select {
+    padding: 0.5rem;
+    font-size: 0.9rem; /* Adjust font size for select */
+  }
+
+  #quote {
+    font-size: 1rem; /* Adjust font size for quote */
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem; /* Ensure proper spacing between buttons */
+  }
+
+  .buttons button {
+    width: auto; /* Adjust width for better appearance */
+    padding: 0.5rem 0.75rem; /* Adjust padding for compact buttons */
+    font-size: 0.9rem; /* Adjust font size for better touch targets */
+    margin: 0; /* Ensure no extra margin */
+  }
+
+  .font-controls {
+    flex-direction: column;
+    gap: 0.5rem; /* Ensure proper spacing between controls */
+  }
+
+  .font-controls button {
+    width: auto; /* Adjust width for better appearance */
+    padding: 0.5rem 0.75rem; /* Adjust padding for compact buttons */
+    font-size: 0.9rem; /* Adjust font size for better touch targets */
+    margin: 0; /* Ensure no extra margin */
+  }
 }
