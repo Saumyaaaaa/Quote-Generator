@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quote Generator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <!-- Heading -->
-        <h1>Quote Generator</h1>
+      <!-- Heading -->
+      <h1>Quote Generator</h1>
 
-        <!-- Category Selection -->
-        <label for="category">Choose a category:</label>
-        <select id="category">
-            <option value="science">Science</option>
-            <option value="philosophy">Philosophy</option>
-        </select>
+      <!-- Category Selection -->
+      <label for="category">Choose a category:</label>
+      <select id="category">
+        <option value="science">Science</option>
+        <option value="philosophy">Philosophy</option>
+        <option value="inspiration">Inspiration</option>
+        <option value="love">Love</option>
+        <option value="humor">Humor</option>
+      </select>
 
-        <!-- Quote Display -->
-        <div id="quote-container">
-            <p id="quote"> quote will appear here...</p>
-        </div>
+      <!-- Quote Display -->
+      <div id="quote-container">
+        <p id="quote">quote will appear here...</p>
+      </div>
 
-        <!-- Navigation Buttons -->
-        <div class="buttons">
-            <button id="prev">Previous</button>
-            <button id="next">Next</button>
-            <button id="random">Random</button>
-        </div>
+      <!-- Navigation Buttons -->
+      <div class="buttons">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+        <button id="random">Random</button>
+      </div>
 
-        <!-- Font Size Controls -->
-        <div class="font-controls">
-            <button id="increase-font">Increase Font Size</button>
-            <button id="decrease-font">Decrease Font Size</button>
-        </div>
+      <!-- Font Size Controls -->
+      <div class="font-controls">
+        <button id="increase-font">Increase Font Size</button>
+        <button id="decrease-font">Decrease Font Size</button>
+      </div>
 
-        <!-- Dark/Light Mode Toggle -->
-        <label for="theme-toggle">Toggle Dark Mode</label>
-        <input type="checkbox" id="theme-toggle">
+      <!-- Dark/Light Mode Toggle -->
+      <label for="theme-toggle">Toggle Dark Mode</label>
+      <input type="checkbox" id="theme-toggle" />
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
