@@ -66,6 +66,7 @@ const quoteContainer = document.getElementById("quote");
 const categorySelect = document.getElementById("category");
 const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
+const randomButton = document.getElementById("random");
 
 
 // Initialize display with the first quote
@@ -100,4 +101,13 @@ nextButton.addEventListener('click', () => {
     currentIndex++; // Move to the next quote
     displayQuote(currentIndex);
   }
+});
+
+// Random button functionality
+randomButton.addEventListener('click', () => {
+    const filteredQuotes = quotes.filter(q => q.category === currentCategory);
+    if (filteredQuotes.length > 0) {
+        currentIndex = Math.floor(Math.random() * filteredQuotes.length); // Random index
+        displayQuote(currentIndex);
+    }
 });
