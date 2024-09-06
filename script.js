@@ -119,5 +119,27 @@ themeToggle.addEventListener('change', () => {
     document.body.classList.toggle('dark-mode', themeToggle.checked);
 });
 
+// Initial font size
+let currentFontSize = 1.4; // Example initial size in rem
 
+// Function to update font size
+const quoteElement = document.getElementById("quote");
+
+function updateFontSize(size) {
+    quoteElement.style.fontSize = `${size}rem`;
+}
+
+//increaseFontButton functionality
+const increaseFontButton = document.getElementById("increase-font");
+increaseFontButton.addEventListener('click', () => {
+    currentFontSize += 0.1; // Increase size by 0.1rem
+    updateFontSize(currentFontSize);
+});
+
+//decreaseFontButton functionality
+const decreaseFontButton = document.getElementById("decrease-font");
+decreaseFontButton.addEventListener('click', () => {
+    currentFontSize = Math.max(0.5, currentFontSize - 0.1); // Decrease size by 0.1rem, minimum 0.5rem
+    updateFontSize(currentFontSize);
+});
 
