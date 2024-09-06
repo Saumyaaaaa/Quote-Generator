@@ -13,6 +13,10 @@ const quotes = [
     category: "science",
   },
   {
+    text: "Physics,Chemistry,Biology and Astronomy combines to make whole science.",
+    category: "science",
+  },
+  {
     text: "The unexamined life is not worth living.",
     category: "philosophy",
   },
@@ -60,6 +64,8 @@ let currentCategory = "science";
 // DOM Elements
 const quoteContainer = document.getElementById("quote");
 const categorySelect = document.getElementById("category");
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
 
 
 // Initialize display with the first quote
@@ -76,4 +82,22 @@ categorySelect.addEventListener('change', (event) => {
     currentCategory = event.target.value;
     currentIndex = 0; // Reset to the first quote in the new category
     displayQuote(currentIndex);
+});
+
+// Previous button functionality
+prevButton.addEventListener('click', () => {
+  const filteredQuotes = quotes.filter(q => q.category === currentCategory);
+  if (currentIndex > 0) {
+    currentIndex--; // Move to the previous quote
+    displayQuote(currentIndex);
+  }
+});
+
+// Next button functionality
+nextButton.addEventListener('click', () => {
+  const filteredQuotes = quotes.filter(q => q.category === currentCategory);
+  if (currentIndex < filteredQuotes.length - 1) {
+    currentIndex++; // Move to the next quote
+    displayQuote(currentIndex);
+  }
 });
